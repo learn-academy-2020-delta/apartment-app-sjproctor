@@ -25,6 +25,12 @@ class App extends Component {
       apartments: mockApartments
     }
   }
+
+  createNewApartment = (newApartment) => {
+    console.log(newApartment)
+  }
+
+
   render () {
     console.log(this.state.apartments)
     const {
@@ -48,7 +54,17 @@ class App extends Component {
 
           <Route path="/apartmentedit/:id" component={ ApartmentEdit } />
 
-          <Route path="/apartmentnew" component={ ApartmentNew } />
+          { logged_in &&
+            <Route
+              path="/apartmentnew"
+              render={ (props) =>
+                <ApartmentNew
+                  createNewApartment={ this.createNewApartment }
+                  current_user={ current_user }
+                />
+              }
+            />
+          }
 
           <Route
             path="/apartmentshow/:id"

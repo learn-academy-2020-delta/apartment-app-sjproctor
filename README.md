@@ -158,7 +158,14 @@ export default App
 - Merge show branch
 
 
-
-
-
-- `console.log` all Devise routes
+### New
+- $ git checkout -b new-apartment
+- Added form for all apartment attributes
+- Apartment must have a user_id
+- Add a handleChange method that updates state in the form
+- Add a handleSubmit method that passes the data to App.js
+- Log the outcome of the createNewApartment method in App.js
+- Refactor static new route to be dynamic
+- Protected the route by checking for the value of logged_in, so a user cannot access the route
+- Pass the createNewApartment method and the current_user to the ApartmentNew component
+- Merge new-apartment branch

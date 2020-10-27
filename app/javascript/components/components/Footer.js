@@ -20,9 +20,14 @@ class Footer extends Component{
               <a href="/apartmentindex">All the Apartments</a>
             </NavItem>
             { logged_in &&
-              <NavItem>
-                <a href={ sign_out_route }>Sign Out</a>
-              </NavItem>
+              <>
+                <NavItem>
+                  <a href={ sign_out_route }>Sign Out</a>
+                </NavItem>
+                <NavItem>
+                  <a href="/apartmentnew">Create a New Apartment</a>
+                </NavItem>
+              </>
             }
             { !logged_in &&
               <>
