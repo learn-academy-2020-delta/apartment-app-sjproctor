@@ -16,14 +16,27 @@
 
 @import 'bootstrap';
 
-// ---HOME---
-img {
-  width: 100vw;
+* {
+  color: #01161E;
+  font-family: 'Roboto', sans-serif;
 }
 
-#home {
-  height: 100vh;
-  text-align: center;
+body {
+  background-color: #FFFAFA;
+}
+
+.button {
+  border: 1px solid black;
+  padding: 15px;
+  background-color: #AEC3B0;
+  border-radius: 10px;
+}
+
+// ---HEADER---
+#header {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #598392;
 }
 
 // ---FOOTER---
@@ -44,4 +57,29 @@ a {
 a:hover {
   text-decoration: none;
   color: #EFF6E0;
+}
+
+// ---HOME---
+img {
+  width: 100vw;
+}
+
+#home {
+  height: 100vh;
+  text-align: center;
+}
+
+// ---INDEX---
+
+#index-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.index-card {
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 20px;
+  width: 30%;
 }

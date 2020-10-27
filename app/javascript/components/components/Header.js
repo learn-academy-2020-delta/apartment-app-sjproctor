@@ -4,7 +4,9 @@ class Header extends Component{
   render(){
     return(
       <React.Fragment>
-        <h3>Header</h3>
+        <div id="header">
+          <h1 className="display-3">Apartment App</h1>
+        </div>
       </React.Fragment>
     )
   }

@@ -115,7 +115,13 @@ export default App
 - Passed all the routes to Footer component
 - Destructured the routes and set up conditional rendering to either see sign up/sign in or sign out based on the status of logged_in (a boolean value)
 - Adding a bit of styling
-- WIP: CSS - Devise links are not in line with other links
+
+### Index
+- Refactor static route to be dynamic
+- 
+
+
+
 
 
 - `console.log` all Devise routes

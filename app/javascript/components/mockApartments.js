@@ -11,7 +11,6 @@ let mockApts = [
     bedrooms: 2,
     bathrooms: 2,
     pets: "no"
-
   },
   {
     id: 2,

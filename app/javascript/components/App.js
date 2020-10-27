@@ -26,6 +26,7 @@ class App extends Component {
     }
   }
   render () {
+    console.log(this.state.apartments)
     const {
       logged_in,
       sign_in_route,
@@ -35,26 +36,19 @@ class App extends Component {
     } = this.props
     return (
       <Router>
-        <h1>Hello World!!!</h1>
-        { logged_in &&
-          <div>
-            <a href={ sign_out_route }>Sign Out</a>
-          </div>
-        }
-
-        { !logged_in &&
-          <div>
-            <a href={ sign_in_route }>Sign In</a>
-          </div>
-        }
         <Header />
 
         <Switch>
           <Route exact path="/" component={ Home } />
+
+          <Route path="/apartmentindex" render={ (props) => <ApartmentIndex apartments={ this.state.apartments } /> } />
+
           <Route path="/apartmentedit/:id" component={ ApartmentEdit } />
-          <Route path="/apartmentindex" component={ ApartmentIndex } />
+
           <Route path="/apartmentnew" component={ ApartmentNew } />
+
           <Route path="/apartmentshow/:id" component={ ApartmentShow } />
+
           <Route component={ NotFound } />
         </Switch>
 
