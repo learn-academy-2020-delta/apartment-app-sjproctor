@@ -1,5 +1,6 @@
 # Apartment App
 
+**Day 1**
 ### Rails App
 - $ rails new apartment_app -d postgresql -T
 - $ cd apartment_app
@@ -93,12 +94,13 @@ export default App
 - Import all components
 - Route to all components
 - Import BrowserRouter
-- `console.log` all Devise routes
 
 ### Mock Data
 - Add a file to *app/javascript/components* to hold frontend mock data
 - Set mock data to state
 
+**Day 2**
 ### Footer
+- `console.log` all Devise routes
 - Take Footer content from Cat Tinder
 - Update routes to include sign in and sign up
