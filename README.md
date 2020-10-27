@@ -99,8 +99,16 @@ export default App
 - Add a file to *app/javascript/components* to hold frontend mock data
 - Set mock data to state
 
+### Add to GitHub
+- $ git remote add origin https://github.com/sjproctor/apartment-app.git
+- $ git checkout -b main
+- $ git add .
+- $ git commit -m "initial commit"
+- $ git push origin main
+
 **Day 2**
 ### Footer
+- $ git checkout -b footer
 - `console.log` all Devise routes
 - Take Footer content from Cat Tinder
 - Update routes to include sign in and sign up
