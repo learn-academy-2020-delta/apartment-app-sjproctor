@@ -115,8 +115,10 @@ export default App
 - Passed all the routes to Footer component
 - Destructured the routes and set up conditional rendering to either see sign up/sign in or sign out based on the status of logged_in (a boolean value)
 - Adding a bit of styling
+- Merge footer branch
 
 ### Index
+- $ git checkout -b index
 - Refactor static index route to be dynamic
 ```
 <Route
@@ -129,8 +131,10 @@ export default App
 - Display the street, city, state of the apartment
 - Add a button to navigate to the show page
 - Add some basic styling for the index cards
+- Merge index branch
 
 ### Show
+- $ git checkout -b show
 - Refactor static show route to be dynamic
 ```
 <Route
@@ -151,8 +155,7 @@ export default App
 - Display all the information for a single apartment
 - Small amount of styling
 - WIP: styling
-
-
+- Merge show branch
 
 
 
