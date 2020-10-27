@@ -25,3 +25,23 @@ img {
   height: 100vh;
   text-align: center;
 }
+
+// ---FOOTER---
+.nav {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #598392;
+  padding: 5px;
+}
+
+a {
+  color: #01161E;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #EFF6E0;
+}

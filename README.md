@@ -109,6 +109,13 @@ export default App
 **Day 2**
 ### Footer
 - $ git checkout -b footer
-- `console.log` all Devise routes
 - Take Footer content from Cat Tinder
-- Update routes to include sign in and sign up
+- Update routes to include sign in and sign up, current_user
+- Destructured the routes in App.js
+- Passed all the routes to Footer component
+- Destructured the routes and set up conditional rendering to either see sign up/sign in or sign out based on the status of logged_in (a boolean value)
+- Adding a bit of styling
+- WIP: CSS - Devise links are not in line with other links
+
+
+- `console.log` all Devise routes
