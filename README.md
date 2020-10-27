@@ -117,8 +117,42 @@ export default App
 - Adding a bit of styling
 
 ### Index
-- Refactor static route to be dynamic
-- 
+- Refactor static index route to be dynamic
+```
+<Route
+  path="/apartmentindex"
+  render={ (props) => <ApartmentIndex apartments={ this.state.apartments } /> }
+/>
+```
+- Pass the mock apartments from state to the index route
+- Map over the apartment array in the index component
+- Display the street, city, state of the apartment
+- Add a button to navigate to the show page
+- Add some basic styling for the index cards
+
+### Show
+- Refactor static show route to be dynamic
+```
+<Route
+  path="/apartmentshow/:id"
+  render={ (props) => {
+    let localid = props.match.params.id
+    let apartment = this.state.apartments.find(apt => apt.id === parseInt(localid))
+    return (
+      <ApartmentShow apartment={ apartment } />
+    )
+  } }
+/>
+```
+- Created a variable to hold the param of the apartment id
+- Created a variable to hold the one apartment that matched the params of id
+- Send the single apartment to the show page
+- Destructure the apartment in the show page
+- Display all the information for a single apartment
+- Small amount of styling
+- WIP: styling
+
+
 
 
 
