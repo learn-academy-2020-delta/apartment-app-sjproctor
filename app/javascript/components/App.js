@@ -30,9 +30,11 @@ class App extends Component {
     console.log(newApartment)
   }
 
+  updateApartment = (apartment, id) => {
+    console.log("apartment", apartment, "id", id)
+  }
 
   render () {
-    console.log(this.state.apartments)
     const {
       logged_in,
       sign_in_route,
@@ -40,11 +42,13 @@ class App extends Component {
       sign_out_route,
       current_user
     } = this.props
+    console.log("current user:", current_user)
     return (
       <Router>
         <Header />
 
         <Switch>
+          // Unprotected routes
           <Route exact path="/" component={ Home } />
 
           <Route
@@ -52,8 +56,18 @@ class App extends Component {
             render={ (props) => <ApartmentIndex apartments={ this.state.apartments } /> }
           />
 
-          <Route path="/apartmentedit/:id" component={ ApartmentEdit } />
+          <Route
+            path="/apartmentshow/:id"
+            render={ (props) => {
+              let localid = props.match.params.id
+              let apartment = this.state.apartments.find(apt => apt.id === parseInt(localid))
+              return (
+                <ApartmentShow apartment={ apartment } />
+              )
+            } }
+          />
 
+          // Protected routes
           { logged_in &&
             <Route
               path="/apartmentnew"
@@ -66,16 +80,22 @@ class App extends Component {
             />
           }
 
-          <Route
-            path="/apartmentshow/:id"
-            render={ (props) => {
-              let localid = props.match.params.id
-              let apartment = this.state.apartments.find(apt => apt.id === parseInt(localid))
-              return (
-                <ApartmentShow apartment={ apartment } />
-              )
-            } }
-          />
+          { logged_in &&
+            <Route
+              path="/apartmentedit/:id"
+              render={ (props) => {
+                let id = props.match.params.id
+                let apartment = this.state.apartments.find(apartment => apartment.id === parseInt(id))
+                return (
+                  <ApartmentEdit
+                    updateApartment={ this.updateApartment }
+                    current_user={ current_user }
+                    apartment={ apartment }
+                  />
+                )
+              }}
+            />
+          }
 
           <Route component={ NotFound } />
         </Switch>

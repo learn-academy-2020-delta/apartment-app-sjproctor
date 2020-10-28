@@ -169,3 +169,15 @@ export default App
 - Protected the route by checking for the value of logged_in, so a user cannot access the route
 - Pass the createNewApartment method and the current_user to the ApartmentNew component
 - Merge new-apartment branch
+
+### Edit
+- $ git checkout -b edit-apartment
+- Added form for all apartment attributes
+- Add a handleChange method that updates state in the form
+- Add a handleSubmit method that passes the data to App.js
+- Log the outcome of the updateApartment method and the apartment id in App.js
+- Refactor static edit route to be dynamic
+- Created a variable to hold the param of the apartment id
+- Created a variable to hold the one apartment that matched the params of id
+- Send the single apartment, current_user,  to the edit page
+- WIP: No links to navigate to the edit page yet

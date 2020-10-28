@@ -45,113 +45,111 @@ class ApartmentNew extends Component{
     return(
       <React.Fragment>
         <h3>Add an Apartment</h3>
-        <div className="body-container">
-          <div className="form">
-            <Form>
-              <FormGroup>
-                <Label>Street</Label>
-                <Input
-                  type="text"
-                  name="street"
-                  onChange={ this.handleChange }
-                  value={ this.state.form.street }
-                />
+        <div className="form-body">
+          <Form>
+            <FormGroup>
+              <Label>Street</Label>
+              <Input
+                type="text"
+                name="street"
+                onChange={ this.handleChange }
+                value={ this.state.form.street }
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label>City</Label>
+              <Input
+                type="text"
+                name="city"
+                onChange={ this.handleChange }
+                value={ this.state.form.city }
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label>State</Label>
+              <Input
+                type="text"
+                name="state"
+                onChange={ this.handleChange }
+                value={ this.state.form.state }
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label>Manager's Name</Label>
+              <Input
+                type="text"
+                name="manager"
+                onChange={ this.handleChange }
+                value={ this.state.form.manager }
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label>Manager's Email</Label>
+              <Input
+                type="text"
+                name="email"
+                onChange={ this.handleChange }
+                value={ this.state.form.email }
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label>Number of Bedrooms</Label>
+              <Input
+                type="number"
+                name="bedrooms"
+                onChange={ this.handleChange }
+                value={ this.state.form.bedrooms }
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label>Number of Bathrooms</Label>
+              <Input
+                type="number"
+                name="bathrooms"
+                onChange={ this.handleChange }
+                value={ this.state.form.bathrooms }
+              />
+            </FormGroup>
+            {/* Setting up a radio button option for pets */}
+            <FormGroup>
+              <Label>Pets</Label>
+              <FormGroup check>
+                <Label check>
+                  <Input
+                    type="radio"
+                    name="pets"
+                    value="yes"
+                    checked={ this.state.form.pets === "yes" }
+                    onChange={ this.handleChange }
+                  />
+                  Yes
+                </Label>
               </FormGroup>
-              <FormGroup>
-                <Label>City</Label>
-                <Input
-                  type="text"
-                  name="city"
-                  onChange={ this.handleChange }
-                  value={ this.state.form.city }
-                />
+              <FormGroup check>
+                <Label check>
+                  <Input
+                    type="radio"
+                    name="pets"
+                    value="no"
+                    checked={ this.state.form.pets === "no" }
+                    onChange={ this.handleChange }
+                  />
+                  No
+                </Label>
               </FormGroup>
-              <FormGroup>
-                <Label>State</Label>
-                <Input
-                  type="text"
-                  name="state"
-                  onChange={ this.handleChange }
-                  value={ this.state.form.state }
-                />
-              </FormGroup>
-              <FormGroup>
-                <Label>Manager's Name</Label>
-                <Input
-                  type="text"
-                  name="manager"
-                  onChange={ this.handleChange }
-                  value={ this.state.form.manager }
-                />
-              </FormGroup>
-              <FormGroup>
-                <Label>Manager's Email</Label>
-                <Input
-                  type="text"
-                  name="email"
-                  onChange={ this.handleChange }
-                  value={ this.state.form.email }
-                />
-              </FormGroup>
-              <FormGroup>
-                <Label>Number of Bedrooms</Label>
-                <Input
-                  type="number"
-                  name="bedrooms"
-                  onChange={ this.handleChange }
-                  value={ this.state.form.bedrooms }
-                />
-              </FormGroup>
-              <FormGroup>
-                <Label>Number of Bathrooms</Label>
-                <Input
-                  type="number"
-                  name="bathrooms"
-                  onChange={ this.handleChange }
-                  value={ this.state.form.bathrooms }
-                />
-              </FormGroup>
-              {/* Setting up a radio button option for pets */}
-              <FormGroup>
-                <Label>Pets</Label>
-                <FormGroup check>
-                  <Label check>
-                    <Input
-                      type="radio"
-                      name="pets"
-                      value="yes"
-                      checked={ this.state.form.pets === "yes" }
-                      onChange={ this.handleChange }
-                    />
-                    Yes
-                  </Label>
-                </FormGroup>
-                <FormGroup check>
-                  <Label check>
-                    <Input
-                      type="radio"
-                      name="pets"
-                      value="no"
-                      checked={ this.state.form.pets === "no" }
-                      onChange={ this.handleChange }
-                    />
-                    No
-                  </Label>
-                </FormGroup>
-              </FormGroup>
+            </FormGroup>
 
 
-              <Button
-              name="submit"
-              color="secondary"
-              onClick={ this.handleSubmit }
-              >
-              Add a New Apartment
-              </Button>
-            </Form>
-          </div>
+            <Button
+            name="submit"
+            color="secondary"
+            onClick={ this.handleSubmit }
+            >
+            Add a New Apartment
+            </Button>
+          </Form>
+          { this.state.success && <Redirect to="/apartmentindex" /> }
         </div>
-        { this.state.success && <Redirect to="/myindex" /> }
       </React.Fragment>
     )
   }

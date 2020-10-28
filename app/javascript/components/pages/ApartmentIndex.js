@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 
 class ApartmentIndex extends Component{
   render(){
-    console.log(this.props.apartments)
     return(
       <React.Fragment>
         <h3>All the Apartments</h3>
