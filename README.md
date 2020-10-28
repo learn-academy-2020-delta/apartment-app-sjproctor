@@ -192,5 +192,18 @@ export default App
 - Added a link in the nav for my apartments that only shows up when a user is logged in
 
 
+### Controller Methods
+- $ git checkout -b controller-methods
+- Added controller methods for Index, Create, Update, Destroy
+- WIP: No validations or testing yet
+
+### Fetch
+- $ git checkout -b fetch-requests
+- added `skip_before_action :verify_authenticity_token` to *application_controller.rb*
+- Added index fetch request
+- Added `componentDidMount` to call the index method
+- Removed mock data imports and set state to an empty array
+
+
 ### Edit and Delete Buttons
 - $ git checkout -b edit-mockup
