@@ -192,6 +192,5 @@ export default App
 - Added a link in the nav for my apartments that only shows up when a user is logged in
 
 
-# Todo
-- Where do the links for edit and delete live?
-- How do I see just my apartments?
+### Edit and Delete Buttons
+- $ git checkout -b edit-mockup
