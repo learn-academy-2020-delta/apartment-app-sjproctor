@@ -181,3 +181,17 @@ export default App
 - Created a variable to hold the one apartment that matched the params of id
 - Send the single apartment, current_user,  to the edit page
 - WIP: No links to navigate to the edit page yet
+
+### Protected Index
+- $ git checkout -b my-apartments
+- Updated mock data to include the foreign key
+- Created a new page of just one user's apartments
+- Created a protected route for the user's apartment index
+- Passing the set of apartments to the component
+- Using code from the regular index page
+- Added a link in the nav for my apartments that only shows up when a user is logged in
+
+
+# Todo
+- Where do the links for edit and delete live?
+- How do I see just my apartments?

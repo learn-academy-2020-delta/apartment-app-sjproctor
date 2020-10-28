@@ -7,6 +7,7 @@ import ApartmentEdit from './pages/ApartmentEdit'
 import ApartmentIndex from './pages/ApartmentIndex'
 import ApartmentNew from './pages/ApartmentNew'
 import ApartmentShow from './pages/ApartmentShow'
+import MyApartmentIndex from './pages/MyApartmentIndex'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 
@@ -77,6 +78,21 @@ class App extends Component {
                   current_user={ current_user }
                 />
               }
+            />
+          }
+
+          { logged_in &&
+            <Route
+              path="/myapartmentindex"
+              render={ (props) => {
+                let user = current_user.id
+                console.log(user)
+                let apartments = this.state.apartments.filter(apartment => apartment.user_id === user)
+                console.log(apartments)
+                return (
+                  <MyApartmentIndex apartments={ apartments }/>
+                )
+              }}
             />
           }
 
