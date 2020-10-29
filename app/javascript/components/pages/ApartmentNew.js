@@ -86,10 +86,19 @@ class ApartmentNew extends Component{
             <FormGroup>
               <Label>Manager's Email</Label>
               <Input
-                type="text"
+                type="email"
                 name="email"
                 onChange={ this.handleChange }
                 value={ this.state.form.email }
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label>Price</Label>
+              <Input
+                type="text"
+                name="price"
+                onChange={ this.handleChange }
+                value={ this.state.form.price }
               />
             </FormGroup>
             <FormGroup>
@@ -148,7 +157,7 @@ class ApartmentNew extends Component{
             Add a New Apartment
             </Button>
           </Form>
-          { this.state.success && <Redirect to="/apartmentindex" /> }
+          { this.state.success && <Redirect to="/myapartmentindex" /> }
         </div>
       </React.Fragment>
     )

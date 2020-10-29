@@ -14,9 +14,17 @@ class MyApartmentIndex extends Component{
                 <h3>{ apartment.city }</h3>
                 <h3>{ apartment.state }</h3>
                 <br />
-                <Link to={`/apartmentshow/${apartment.id}`} className="button">
-                  More Info
-                </Link>
+                <div id="my-buttons">
+                  <Link to={`/apartmentshow/${apartment.id}`} className="button">
+                    More Info
+                  </Link>
+                  <Link to={`/apartmentedit/${apartment.id}`} className="button">
+                    Edit Listing Info
+                  </Link>
+                  <span onClick={ () => { this.props.deleteApartment(apartment.id) } } className="button">
+                    Remove Listing
+                  </span>
+                </div>
               </div>
             )
           })}

@@ -8,9 +8,9 @@ class ApartmentsController < ApplicationController
     apartment = Apartment.create(apartment_params)
     if apartment.valid?
       render json: apartment
-     else
+    else
       render json: apartment.errors, status: :unprocessable_entity
-     end
+    end
   end
 
   def update
@@ -30,6 +30,7 @@ class ApartmentsController < ApplicationController
     else
       render json: apartment.errors, status: :unprocessable_entity
     end
+  end
 
   private
   # Apartments have: a street designation, a city, state, a manager's name, manager's contact email, monthly rental price, bedrooms, bathrooms, and whether they allow pets
