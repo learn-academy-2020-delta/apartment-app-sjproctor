@@ -7,7 +7,8 @@ class Footer extends Component{
       logged_in,
       sign_in_route,
       sign_up_route,
-      sign_out_route
+      sign_out_route,
+      edit_user_route
     } = this.props
     return(
       <React.Fragment>
@@ -23,6 +24,9 @@ class Footer extends Component{
               <>
                 <NavItem>
                   <a href={ sign_out_route }>Sign Out</a>
+                </NavItem>
+                <NavItem>
+                  <a href={ edit_user_route }>Edit User</a>
                 </NavItem>
                 <NavItem>
                   <a href="/apartmentnew">Create a New Apartment</a>

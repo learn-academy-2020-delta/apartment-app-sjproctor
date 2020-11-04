@@ -182,6 +182,7 @@ export default App
 - Send the single apartment, current_user,  to the edit page
 - WIP: No links to navigate to the edit page yet
 
+**Day 3**
 ### Protected Index
 - $ git checkout -b my-apartments
 - Updated mock data to include the foreign key
@@ -207,3 +208,10 @@ export default App
 
 ### Edit and Delete Buttons
 - $ git checkout -b edit-mockup
+
+
+**Day 4**
+### Modifying Devise
+- Add a migration to the User table
+- $ rails generate migration add_username_to_user
+- 

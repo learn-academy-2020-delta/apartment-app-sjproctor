@@ -104,7 +104,8 @@ class App extends Component {
       sign_in_route,
       sign_up_route,
       sign_out_route,
-      current_user
+      current_user,
+      edit_user_route
     } = this.props
     console.log("current user:", current_user)
     console.log(this.state.apartments)
@@ -196,6 +197,7 @@ class App extends Component {
           sign_in_route={ sign_in_route }
           sign_up_route={ sign_up_route }
           sign_out_route={ sign_out_route }
+          edit_user_route={ edit_user_route }
         />
       </Router>
     )

@@ -90,16 +90,18 @@ img {
   margin-left: 20px;
 }
 
-form {
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-bottom: 100px;
-}
-
 
 // ---MY APARTMENTS---
 
 #my-buttons {
   display: flex;
   flex-direction: row;
+}
+
+// ---NEW APARTMENT---
+
+.form-body {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 100px;
 }
